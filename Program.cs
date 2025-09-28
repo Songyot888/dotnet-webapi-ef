@@ -15,7 +15,11 @@ if (string.IsNullOrWhiteSpace(connStr))
 
 // Register DbContext (Pomelo + MySqlConnector)
 builder.Services.AddDbContext<RailwayContext>(opt =>
-    opt.UseMySql(connStr, ServerVersion.AutoDetect(connStr)));
+    opt.UseMySql(
+        Environment.GetEnvironmentVariable("CONNECTION_STRING") ??
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(connStr)
+    ));
 
 builder.Services.AddControllers().AddNewtonsoftJson(opt =>
 {
