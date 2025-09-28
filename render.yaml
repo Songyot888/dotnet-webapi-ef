@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: dotnet-api
+    env: docker
+    # ถ้า Dockerfile อยู่ root ให้ลบทิ้งสองบรรทัดนี้
+    # rootDirectory: api        # <- ใส่ถ้าโปรเจกต์อยู่ในโฟลเดอร์ย่อย เช่น "api"
+    # dockerfilePath: Dockerfile # <- ชื่อ Dockerfile (ค่าเริ่มต้นคือ "Dockerfile")
+
+    plan: free                  # เปลี่ยนเป็น starter/standard ถ้าต้องการ
+    autoDeploy: true
+    regions:
+      - singapore               # เลือก region ที่ใกล้ (ตัวอย่าง)
+    # health check: ใช้ "/" ถ้าไม่มี endpoint เฉพาะ
+    healthCheckPath: /
+    # Render จะ map PORT=8080 ให้เราอัตโนมัติ (เราตั้ง ASPNETCORE_URLS ใน Dockerfile แล้ว)
+
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+      # ใส่ Connection String แบบ Secret ใน Render Dashboard ทีหลังจะปลอดภัยกว่า
+      - key: ConnectionStrings__DefaultConnection
+        sync: false   # ตั้งค่าใน Dashboard → Environment → Add Environment Variable
+
+      # ตัวอย่างค่าคงที่อื่น ๆ
+      # - key: SomeApiBaseUrl
+      #   value: https://example.com
+
