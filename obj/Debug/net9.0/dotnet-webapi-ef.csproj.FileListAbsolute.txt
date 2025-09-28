@@ -136,3 +136,4 @@ D:\Mobile\dotnet-webapi-ef\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Mobile\dotnet-webapi-ef\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Mobile\dotnet-webapi-ef\bin\Debug\net9.0\Newtonsoft.Json.dll
 D:\Mobile\dotnet-webapi-ef\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+D:\Mobile\dotnet-webapi-ef\obj\Debug\net9.0\dotnet-webapi-ef.sourcelink.json

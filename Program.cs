@@ -7,7 +7,12 @@ using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+var conn = builder.Configuration.GetConnectionString("DefaultConnection") ??
+"Server=ns1.server-82-26-104-71.da.direct;Port=3306;" +
+    "Database=activi89_mb68_66011212090;" +
+    "User=activi89_mb68_66011212090;" +
+    "Password=KSsZwmmm8CCkVjpGaTUp;" +
+    "SslMode=Preferred";
 
 try
 {
