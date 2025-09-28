@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae9513d5edc11d5ca4d4710e2598283576cf1afe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505b07dbf41eda45c812549983fadc90b994b518")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
