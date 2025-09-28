@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # 1) copy csproj แล้ว restore ก่อน เพื่อใช้ layer cache
-COPY ./YourProject.csproj ./
+COPY ./dotnet-webapi-ef.csproj ./
 RUN dotnet restore "./dotnet-webapi-ef.csproj"
 
 # 2) copy ที่เหลือ แล้ว publish
