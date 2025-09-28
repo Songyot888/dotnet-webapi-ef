@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace dotnet_webapi_ef.Models;
+
+[Table("WalletTxn")]
+[Index("Uid", Name = "fk_wallettxn_users")]
+[MySqlCharSet("utf8mb4")]
+[MySqlCollation("utf8mb4_general_ci")]
+public partial class WalletTxn
+{
+    [Key]
+    [Column("wid", TypeName = "bigint(20) unsigned")]
+    public ulong Wid { get; set; }
+
+    [Column("uid", TypeName = "int(10) unsigned")]
+    public uint Uid { get; set; }
+
+    [Column("top_up")]
+    [Precision(14, 2)]
+    public decimal? TopUp { get; set; }
+
+    [Column("withdraw")]
+    [Precision(14, 2)]
+    public decimal? Withdraw { get; set; }
+
+    [Column("status")]
+    public bool Status { get; set; }
+
+    [Column("date", TypeName = "datetime")]
+    public DateTime Date { get; set; }
+
+    [ForeignKey("Uid")]
+    [InverseProperty("WalletTxns")]
+    public virtual User UidNavigation { get; set; } = null!;
+}
