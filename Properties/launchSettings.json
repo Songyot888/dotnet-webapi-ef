@@ -4,10 +4,10 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5216",
+      "applicationUrl": "http://localhost:5189",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_URL": "Server=shuttle.proxy.rlwy.net;Port=58058;Database=railway;User=root;Password=QsAuLMzTPcKIQABatuHFyUggFThSdqRv;SslMode=Required;DefaultCommandTimeout=30;"
       }
     },
     "https": {

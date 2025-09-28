@@ -1,7 +1,7 @@
 using api_lotto.DTOs.auth;
 using api_lotto.Helpers;
 using api_lotto.Mappers;
-using dotnet_webapi_ef.Data;
+using dotnet_webapi_ef.Models;
 using lotto_api.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +12,8 @@ namespace api_lotto.controllers
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
-        private readonly ApplicationDBContext _context;
-        public AuthController(ApplicationDBContext context)
+        private readonly RailwayContext _context;
+        public AuthController(RailwayContext context)
         {
             _context = context;
         }

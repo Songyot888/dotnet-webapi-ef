@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("44b7825d-b5e2-4afa-bcd3-979ce5fc3538")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e913f9458bf44f68ac44c295b976738ea2bab8a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b93f5a20aabc357c7736659e291614ec0346c00c")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet-webapi-ef")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

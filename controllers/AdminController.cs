@@ -1,5 +1,4 @@
 using api_lotto.DTOs.admin;
-using dotnet_webapi_ef.Data;
 using dotnet_webapi_ef.Models;
 using lotto_api.DTOs.admin;
 using lotto_api.Mappers;
@@ -13,8 +12,8 @@ namespace lotto_api.controllers
     [Route("api/[controller]")]
     public class AdminController : ControllerBase
     {
-        private readonly ApplicationDBContext _context;
-        public AdminController(ApplicationDBContext context)
+        private readonly RailwayContext _context;
+        public AdminController(RailwayContext context)
         {
             _context = context;
         }

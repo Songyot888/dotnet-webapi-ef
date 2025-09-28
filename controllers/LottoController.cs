@@ -1,6 +1,6 @@
 
 using System.Globalization;
-using dotnet_webapi_ef.Data;
+// using dotnet_webapi_ef.Data;
 using dotnet_webapi_ef.Models;
 using lotto_api.DTOs.lottory;
 
@@ -16,8 +16,8 @@ namespace api_lotto.controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly ApplicationDBContext _context;
-        public UserController(ApplicationDBContext context)
+        private readonly RailwayContext _context;
+        public UserController(RailwayContext context)
         {
             _context = context;
         }

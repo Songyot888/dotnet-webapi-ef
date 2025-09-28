@@ -1,4 +1,5 @@
-using dotnet_webapi_ef.Data;
+// using dotnet_webapi_ef.Data;
+using dotnet_webapi_ef.Models;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
@@ -13,7 +14,7 @@ if (string.IsNullOrWhiteSpace(connStr))
 
 
 // Register DbContext (Pomelo + MySqlConnector)
-builder.Services.AddDbContext<ApplicationDBContext>(opt =>
+builder.Services.AddDbContext<RailwayContext>(opt =>
     opt.UseMySql(connStr, ServerVersion.AutoDetect(connStr)));
 
 builder.Services.AddControllers().AddNewtonsoftJson(opt =>
