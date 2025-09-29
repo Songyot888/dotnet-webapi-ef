@@ -6,16 +6,14 @@ using MySqlConnector;
 var builder = WebApplication.CreateBuilder(args);
 
 // ใช้ ENV ตรง ๆ จาก Railway
-var connStr = Environment.GetEnvironmentVariable("MYSQL_URL");
-if (string.IsNullOrWhiteSpace(connStr))
-    throw new InvalidOperationException("MYSQL_URL is not set. Configure it in Railway → Variables.");
-
+var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
+    ?? builder.Configuration.GetConnectionString("DefaultConnection");
 // ทดสอบเชื่อมต่อสั้น ๆ (แค่ log)
 
 
 // Register DbContext (Pomelo + MySqlConnector)
 builder.Services.AddDbContext<RailwayContext>(opt =>
-    opt.UseMySql(connStr, ServerVersion.AutoDetect(connStr)));
+    opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddControllers().AddNewtonsoftJson(opt =>
 {
